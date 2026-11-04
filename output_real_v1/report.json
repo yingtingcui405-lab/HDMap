@@ -1,0 +1,84 @@
+{
+  "created_utc": "2026-10-23T13:53:55.773227+00:00",
+  "tbv_root": "/Volumes/初棠/Argoverse 2",
+  "argotweak_root": "/Volumes/初棠/ArgoTweak",
+  "scope": "real_only",
+  "local_log_count": 1043,
+  "local_argotweak_file_count": 910,
+  "buckets": {
+    "real_change": 105,
+    "constructed_pool": 799,
+    "unlabeled": 133,
+    "real_no_change_control": 6
+  },
+  "output_rows": {
+    "all_logs.jsonl": 1043,
+    "real_change_logs.jsonl": 105,
+    "real_no_change_controls.jsonl": 6,
+    "constructed_pool.jsonl": 799,
+    "unlabeled_logs.jsonl": 133,
+    "review_logs.jsonl": 0,
+    "tbv_events.jsonl": 213,
+    "argotweak_changed_elements.jsonl": 2681
+  },
+  "missing_official_log_ids": [],
+  "missing_argotweak_log_ids": [],
+  "unexpected_log_ids": [],
+  "tbv_event_types": {
+    "lane_geometry_change": 147,
+    "delete_crosswalk": 46,
+    "insert_crosswalk": 20
+  },
+  "metadata_sha256": {
+    "tbv_splits.json": "aca59dc77d33fea65b07924ea883b0b1c0b11633bde1a7e56d6d5e6e0f6ea9f2",
+    "argotweak_splits.json": "c342c1a5f53b8aa3500630e077c7002ab8b1760eb116ea16b745bd6c6b553b01",
+    "tbv_val_split_annotations.json": "bb06180b36711b148664242b43f03d822a466878654aea4bca08aa54897d465e"
+  },
+  "source_provenance": {
+    "retrieved_utc": "2026-10-23T13:43:04.623735+00:00",
+    "commits": {
+      "tbv": "ff77e1cef9d383efb96f25a6dfaabf615c72d61b",
+      "argotweak": "016f7cfc3d7d21b533a828d6636a3ae86a1ed415"
+    },
+    "sources": [
+      {
+        "file": "tbv_val_split_annotations.json",
+        "url": "https://raw.githubusercontent.com/johnwlambert/tbv/ff77e1cef9d383efb96f25a6dfaabf615c72d61b/labeled_data/tbv_val_split_annotations.json",
+        "sha256": "bb06180b36711b148664242b43f03d822a466878654aea4bca08aa54897d465e"
+      },
+      {
+        "file": "tbv_splits.py",
+        "url": "https://raw.githubusercontent.com/johnwlambert/tbv/ff77e1cef9d383efb96f25a6dfaabf615c72d61b/tbv/splits.py",
+        "sha256": "e079656812aa8b3fe2ec7fd4338b39f661692bd114197cb7def6d6bf3dbfd904"
+      },
+      {
+        "file": "argotweak_splits.json",
+        "url": "https://raw.githubusercontent.com/KTH-RPL/ArgoTweak_baselines/016f7cfc3d7d21b533a828d6636a3ae86a1ed415/tools/splits.json",
+        "sha256": "c342c1a5f53b8aa3500630e077c7002ab8b1760eb116ea16b745bd6c6b553b01"
+      },
+      {
+        "file": "argotweak_annotate_reference.py",
+        "url": "https://raw.githubusercontent.com/KTH-RPL/ArgoTweak_baselines/016f7cfc3d7d21b533a828d6636a3ae86a1ed415/tools/utils/annotate.py",
+        "sha256": "0cd689ed2ef3ecb14c842c146151c895dd43e4e21961a1b6c4d035f389b1ca5e"
+      },
+      {
+        "file": "tbv_LICENSE",
+        "url": "https://raw.githubusercontent.com/johnwlambert/tbv/ff77e1cef9d383efb96f25a6dfaabf615c72d61b/LICENSE",
+        "sha256": "1349a4b6148492b44f629e64eed676612e234fe9a839e4f3b277c1482c8849f1"
+      }
+    ],
+    "generated": [
+      {
+        "file": "tbv_splits.json",
+        "method": "ast.literal_eval TRAIN/VAL/TEST from tbv_splits.py",
+        "sha256": "aca59dc77d33fea65b07924ea883b0b1c0b11633bde1a7e56d6d5e6e0f6ea9f2"
+      }
+    ]
+  },
+  "limits": [
+    "Scene selection only, not frame labels or visible-change verification.",
+    "Sensor file contents and completeness have not been validated.",
+    "Ground-truth labels are for curation/evaluation, not detector inputs.",
+    "Keep real test separate from constructed train/val; preserve raw codes and old/new fields."
+  ]
+}
